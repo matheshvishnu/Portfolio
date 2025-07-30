@@ -253,7 +253,17 @@ span {
     border-radius: 1.5rem; /* More rounded corners */
     box-shadow: 0 0 2rem var(--shadow-color); /* Stronger shadow */
     border: 2px solid var(--border-color); /* Subtle border */
+    /* --- NEW/UPDATED FOR EXCELLENT ALIGNMENT --- */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    aspect-ratio: 1 / 1; /* Forces a perfect square aspect ratio */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
 }
+
+.about-img img:hover {
+    transform: scale(1.03); /* Slight zoom on hover */
+    box-shadow: 0 0 3rem var(--main-color), 0 0 8rem var(--accent-fade-color); /* Enhanced glow on hover */
+}
+
 
 .heading {
     text-align: center;
