@@ -1,0 +1,887 @@
+/* Universal Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+/* Color Variables - Professional Aesthetic Palette (Revised) */
+:root {
+    --bg-color: #1A202C;        /* Deep Dark Blue-Gray (Main background) */
+    --second-bg-color: #2D3748; /* Slightly Lighter Dark Blue-Gray (Alternate section/card background) */
+    --text-color: #E2E8F0;      /* Light Grayish Blue (Primary text color) */
+    --main-color: #63B3ED;      /* Vibrant Sky Blue (Primary accent color) */
+    --accent-fade-color: rgba(99, 179, 237, 0.2); /* Faded accent for shadows/glows */
+    --shadow-color: rgba(0, 0, 0, 0.7); /* Darker shadow for depth */
+    --border-color: #4A5568;    /* Medium-Dark Gray (Subtle border color) */
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    font-family: 'Inter', sans-serif; /* Professional body font */
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+    transition: background 0.5s ease;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 .5rem 1.5rem var(--shadow-color); /* More pronounced shadow */
+    border-bottom: 1px solid var(--border-color); /* Subtle bottom border */
+}
+
+.header.sticky {
+    background: var(--second-bg-color);
+    border-bottom: 1px solid var(--main-color);
+}
+
+.logo {
+    font-size: 2.8rem;
+    color: var(--text-color);
+    font-weight: 700;
+    cursor: default;
+    text-shadow: 0 0 .8rem var(--accent-fade-color);
+    font-family: 'Poppins', sans-serif; /* Poppins for logo */
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4.5rem; /* Increased spacing */
+    transition: .3s ease;
+    position: relative;
+    font-weight: 500;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+    text-shadow: 0 0 .5rem var(--accent-fade-color);
+}
+
+/* Underline effect for active/hover */
+.navbar a::before {
+    content: '';
+    position: absolute;
+    bottom: -8px; /* Adjusted position */
+    left: 0;
+    width: 0%;
+    height: .25rem; /* Slightly thicker underline */
+    background-color: var(--main-color);
+    transition: width 0.3s ease;
+    border-radius: 2px; /* Soft edges for underline */
+}
+
+.navbar a:hover::before,
+.navbar a.active::before {
+    width: 100%;
+}
+
+#menu-icon {
+    font-size: 3.8rem; /* Slightly larger icon */
+    color: var(--text-color);
+    display: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+#menu-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem; /* More space */
+    padding-top: 14rem; /* More padding to clear header */
+    padding-bottom: 6rem;
+}
+
+.home-content h3 {
+    font-size: 4.2rem; /* Larger font size */
+    font-weight: 700;
+    line-height: 1.2;
+    font-family: 'Poppins', sans-serif;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 3rem; /* More margin */
+}
+
+span {
+    color: var(--main-color);
+    text-shadow: 0 0 1.5rem var(--main-color); /* Stronger glow */
+}
+
+.home-content h1 {
+    font-size: 7rem; /* Larger H1 */
+    font-weight: 700;
+    line-height: 1.1;
+    margin-top: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.home-img img {
+    width: 30vw; /* Slightly smaller image */
+    max-width: 380px;
+    border-radius: 50%;
+    border: 4px solid var(--main-color); /* Add a border */
+    box-shadow: 0 0 3rem var(--main-color), 0 0 8rem var(--accent-fade-color); /* Enhanced glow effect */
+    animation: floatImage 4s ease-in-out infinite;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+}
+
+@keyframes floatImage {
+    0%, 100%{
+        transform: translateY(0) scale(1);
+    }
+    50%{
+        transform: translateY(-2.8rem) scale(1.02); /* Slightly more movement */
+    }
+}
+
+.home-content p {
+    font-size: 1.9rem; /* Larger paragraph text */
+    margin-top: 3rem;
+    color: var(--text-color);
+    max-width: 800px; /* Wider paragraph for readability */
+    line-height: 1.7;
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5.2rem; /* Larger icons */
+    height: 5.2rem;
+    background: var(--second-bg-color); /* Background for icons */
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    color: var(--main-color);
+    margin: 4rem 2rem 4rem 0; /* Adjusted margins */
+    transition: .5s ease;
+    box-shadow: 0 0 1rem var(--main-color); /* Initial glow */
+}
+
+.social-media a i {
+    font-size: 3rem; /* Icon size */
+}
+
+/* Specific styling for LeetCode icon to match boxicons */
+.social-media .leetcode-icon {
+    width: 3rem; /* Match the font-size of bx icons */
+    height: 3rem;
+    vertical-align: middle;
+    filter: brightness(0) saturate(100%) invert(84%) sepia(35%) saturate(5185%) hue-rotate(143deg) brightness(101%) contrast(101%); /* This filter makes a black icon the --main-color */
+    transition: .5s ease;
+}
+
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 2rem var(--main-color); /* Stronger glow on hover */
+    transform: translateY(-8px); /* More pronounced lift effect */
+}
+
+.social-media a:hover .leetcode-icon {
+    filter: brightness(0) saturate(100%) invert(18%) sepia(8%) saturate(1450%) hue-rotate(180deg) brightness(97%) contrast(85%); /* Changes it to --second-bg-color on hover */
+}
+
+.btn {
+    display: inline-block;
+    padding: 1.4rem 3.8rem; /* Larger button padding */
+    background: var(--main-color);
+    border-radius: 4.5rem; /* Slightly more rounded */
+    box-shadow: 0 0 1.5rem var(--main-color);
+    font-size: 1.9rem; /* Larger font size */
+    color: var(--second-bg-color);
+    letter-spacing: .08rem; /* Slightly more spacing */
+    font-weight: 600;
+    transition: .5s ease;
+    text-transform: uppercase;
+    border: 2px solid var(--main-color); /* Add a subtle border */
+}
+
+.btn:hover {
+    box-shadow: none; /* Remove shadow on hover */
+    background: var(--second-bg-color); /* Change background to secondary */
+    color: var(--main-color); /* Change text color to main */
+    transform: scale(1.05); /* More pronounced scale on hover */
+    border-color: var(--main-color); /* Maintain border color */
+}
+
+
+/* About Section */
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem; /* Increased gap */
+    background: var(--second-bg-color);
+    padding: 10rem 9% 5rem;
+}
+
+.about-img img {
+    width: 35vw; /* Adjusted width */
+    max-width: 480px;
+    border-radius: 1.5rem; /* More rounded corners */
+    box-shadow: 0 0 2rem var(--shadow-color); /* Stronger shadow */
+    border: 2px solid var(--border-color); /* Subtle border */
+}
+
+.heading {
+    text-align: center;
+    font-size: 5.8rem; /* Larger heading */
+    margin-bottom: 6rem; /* More margin */
+    color: var(--text-color);
+    text-shadow: 0 0 1.2rem var(--shadow-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+.about-content h2 {
+    text-align: left;
+    line-height: 1.2;
+    margin-bottom: 2.5rem;
+}
+
+.about-content h3 {
+    font-size: 3.2rem; /* Larger H3 */
+    margin-bottom: 1.8rem;
+    color: var(--main-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+.about-content p {
+    font-size: 1.8rem;
+    margin: 2.5rem 0 4rem;
+    color: var(--text-color);
+    line-height: 1.8; /* Improved line height */
+}
+
+
+/* Services/Skills Section */
+.services h2 {
+    margin-bottom: 7rem; /* More margin */
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Stretch items to equal height */
+    flex-wrap: wrap;
+    gap: 3.5rem; /* Increased gap between service boxes */
+}
+
+.services-container .services-box {
+    flex: 1; /* Allow items to grow/shrink equally and take equal height */
+    background: var(--second-bg-color);
+    padding: 4.5rem 3.5rem 5.5rem; /* More padding */
+    border-radius: 1.8rem; /* More rounded corners */
+    text-align: center;
+    border: .2rem solid var(--border-color); /* Subtle border */
+    transition: .5s ease;
+    box-shadow: 0 0 1.5rem var(--shadow-color); /* Soft initial shadow */
+    position: relative;
+    overflow: hidden; /* For pseudo-element hover effect */
+    min-width: 300px; /* Ensure minimum width to prevent squishing */
+    max-width: 400px; /* Optional: Limit max width if desired */
+}
+
+.services-container .services-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(to bottom, var(--main-color), transparent);
+    opacity: 0.1;
+    transition: height 0.5s ease;
+}
+
+.services-container .services-box:hover::before {
+    height: 100%; /* Fill from top on hover */
+}
+
+.services-container .services-box:hover {
+    border-color: var(--main-color);
+    transform: translateY(-1.2rem) scale(1.03); /* Lift and slight scale on hover */
+    box-shadow: 0 0 2.5rem var(--main-color); /* Stronger glow on hover */
+}
+
+.services-box i {
+    font-size: 8.5rem; /* Larger icon size */
+    color: var(--main-color);
+    margin-bottom: 2.5rem;
+    text-shadow: 0 0 1rem var(--main-color); /* Glow for icons */
+    position: relative; /* Ensure icon is above pseudo-element */
+    z-index: 1;
+}
+
+.services-box h3 {
+    font-size: 2.9rem; /* Larger H3 */
+    margin-bottom: 1.8rem;
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    z-index: 1;
+}
+
+.services-box p {
+    font-size: 1.7rem;
+    margin: 1.5rem 0 3.5rem;
+    color: var(--text-color);
+    line-height: 1.7;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Portfolio/Projects Section */
+.portfolio {
+    background: var(--bg-color);
+    padding-bottom: 7rem;
+}
+
+.portfolio h2 {
+    margin-bottom: 6rem;
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Adjusted min-width for projects */
+    align-items: stretch; /* Ensure equal height for grid items */
+    gap: 3.5rem; /* Increased gap */
+}
+
+.portfolio-container .portfolio-box {
+    position: relative;
+    border-radius: 1.8rem; /* More rounded corners */
+    box-shadow: 0 0 1.5rem var(--shadow-color);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Allow content to stack */
+    min-height: 420px; /* Increased minimum height for project boxes to fit content + button */
+    background: var(--second-bg-color);
+    border: 2px solid var(--border-color);
+}
+
+.portfolio-box img {
+    width: 100%;
+    height: 100%; /* Make image fill the entire box */
+    object-fit: cover;
+    transition: .5s ease;
+}
+
+.portfolio-box:hover img {
+    transform: scale(1.2); /* More zoom on hover */
+    filter: brightness(0.4); /* More dimming */
+}
+
+.portfolio-box .portfolio-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .7), var(--main-color)); /* Stronger gradient */
+    display: flex;
+    justify-content: center; /* Center vertically */
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 3.5rem; /* Consistent padding on all sides */
+    transform: translateY(100%);
+    transition: .5s ease;
+    color: var(--text-color);
+}
+
+.portfolio-box:hover .portfolio-layer {
+    transform: translateY(0);
+}
+
+.portfolio-layer h4 {
+    font-size: 3.4rem; /* Larger heading */
+    margin-bottom: 1.5rem; /* Increased margin */
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+.portfolio-layer p {
+    font-size: 1.6rem;
+    margin: 1rem 0 2rem; /* Increased vertical margins */
+    color: var(--text-color);
+    text-shadow: 0 0 .6rem var(--shadow-color);
+    line-height: 1.6;
+}
+
+.portfolio-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem; /* Larger icon link */
+    height: 6rem;
+    background: var(--text-color);
+    border-radius: 50%;
+    margin-top: 2rem; /* Increased margin-top to push it down */
+    box-shadow: 0 0 1.2rem var(--main-color);
+    transition: .3s ease;
+}
+
+.portfolio-layer a i {
+    font-size: 2.8rem; /* Icon size */
+    color: var(--second-bg-color);
+}
+
+.portfolio-layer a:hover {
+    background: var(--main-color);
+    color: var(--text-color);
+    box-shadow: 0 0 2.5rem var(--main-color);
+    transform: scale(1.15);
+}
+
+
+/* Experience Section Styles */
+.experience {
+    background: var(--second-bg-color);
+    padding-bottom: 7rem;
+}
+
+.experience .heading {
+    margin-bottom: 6rem;
+}
+
+.experience-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Ensure all boxes stretch to the same height */
+    flex-wrap: wrap;
+    gap: 3.5rem; /* Spacing between experience boxes */
+}
+
+.experience-box {
+    flex: 1; /* Allow items to grow/shrink equally and take equal height */
+    background: var(--bg-color);
+    padding: 4rem 3.5rem; /* Generous padding inside boxes */
+    border-radius: 1.8rem; /* More rounded corners */
+    text-align: left;
+    border: .2rem solid var(--border-color);
+    transition: .5s ease;
+    box-shadow: 0 0 1.5rem var(--shadow-color);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    min-width: 300px; /* Ensure minimum width to prevent squishing */
+    max-width: 450px; /* Optional: Limit max width if desired */
+}
+
+.experience-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(to bottom, var(--main-color), transparent);
+    opacity: 0.1;
+    transition: height 0.5s ease;
+}
+
+.experience-box:hover::before {
+    height: 100%;
+}
+
+.experience-box:hover {
+    border-color: var(--main-color);
+    transform: translateY(-1.2rem) scale(1.02);
+    box-shadow: 0 0 2.5rem var(--main-color);
+}
+
+.experience-box h3 {
+    font-size: 2.8rem; /* Main title for the box */
+    color: var(--main-color);
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    z-index: 1;
+}
+
+.experience-box h4 {
+    font-size: 2.2rem; /* Subtitle for company/category */
+    color: var(--text-color);
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    z-index: 1;
+}
+
+.experience-box .duration {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    opacity: 0.7;
+    margin-bottom: 2rem; /* More spacing below duration */
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+}
+
+.experience-box ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1rem;
+    flex-grow: 1; /* Allow ul to take available space */
+    position: relative;
+    z-index: 1;
+}
+
+.experience-box ul li {
+    font-size: 1.7rem; /* Larger list item text */
+    color: var(--text-color);
+    margin-bottom: 1rem; /* More spacing between list items */
+    padding-left: 2.5rem; /* Indent for custom bullet */
+    position: relative;
+    line-height: 1.6;
+}
+
+.experience-box ul li::before {
+    content: '\2022'; /* Unicode for a solid bullet point */
+    color: var(--main-color);
+    font-weight: bold;
+    display: inline-block;
+    width: 1.2em; /* Adjust width for bullet alignment */
+    margin-left: -1.2em;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+/* Contact Section */
+.contact {
+    background: var(--bg-color);
+    padding-bottom: 7rem;
+}
+
+.contact h2 {
+    margin-bottom: 5rem;
+}
+
+.contact form {
+    max-width: 85rem; /* Wider form */
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 6rem;
+    padding: 4rem; /* More padding to form */
+    background: var(--second-bg-color);
+    border-radius: 1.8rem; /* More rounded */
+    box-shadow: 0 0 2.5rem var(--shadow-color);
+    border: 2px solid var(--border-color);
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 2rem; /* More spacing between input lines */
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.8rem;
+    font-size: 1.7rem;
+    color: var(--text-color);
+    background: var(--bg-color); /* Input background */
+    border-radius: .8rem;
+    margin: .8rem 0;
+    box-shadow: inset 0 0 .6rem var(--shadow-color); /* Inner shadow for input fields */
+    border: .1rem solid var(--border-color); /* Subtle border */
+    transition: border-color .3s ease, box-shadow .3s ease;
+}
+
+.contact form .input-box input:focus,
+.contact form textarea:focus {
+    border-color: var(--main-color);
+    box-shadow: inset 0 0 1rem var(--main-color); /* Glow on focus */
+}
+
+.contact form .input-box input {
+    width: 49%;
+}
+
+.contact FORM textarea {
+    resize: vertical;
+    min-height: 180px; /* Taller textarea */
+}
+
+.contact form .btn {
+    margin-top: 3.5rem; /* More margin */
+    padding: 1.6rem 4.5rem; /* Larger button */
+    font-size: 2.1rem;
+    box-shadow: 0 0 2rem var(--main-color); /* Stronger glow */
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 3rem 9%; /* More padding */
+    background: var(--second-bg-color);
+    border-top: 1px solid var(--main-color);
+}
+
+.footer-text p {
+    font-size: 1.7rem;
+    color: var(--text-color);
+}
+
+.footer-iconTap a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem; /* Larger padding */
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+    box-shadow: 0 0 1.2rem var(--main-color);
+}
+
+.footer-iconTap a:hover {
+    box-shadow: 0 0 2.5rem var(--main-color);
+    transform: translateY(-8px); /* More pronounced lift on hover */
+}
+
+.footer-iconTap i {
+    font-size: 2.8rem; /* Larger icon */
+    color: var(--second-bg-color);
+}
+
+/* Breakpoints (responsive adjustments) */
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+    .home-content h1 {
+        font-size: 6rem;
+    }
+    .home-content h3 {
+        font-size: 3.5rem;
+    }
+    .heading {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+    section {
+        padding: 10rem 3% 2rem;
+    }
+    .footer {
+        padding: 2rem 3%;
+    }
+    .services, .portfolio, .experience, .contact {
+        padding-bottom: 7rem;
+    }
+    .navbar a {
+        margin-left: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: center;
+    }
+    .navbar.active {
+        display: flex; /* Changed to flex for column layout */
+    }
+    .navbar a {
+        display: block;
+        font-size: 2.2rem; /* Larger font for mobile menu */
+        margin: 2rem 0; /* More vertical spacing */
+        text-align: center;
+    }
+    .navbar a::before { /* Hide underline for mobile menu */
+        display: none;
+    }
+
+    .home {
+        flex-direction: column;
+        padding-top: 10rem;
+    }
+    .home-content h3 {
+        font-size: 3.5rem;
+    }
+    .home-content h1 {
+        font-size: 5rem;
+    }
+    .home-img img {
+        width: 60vw;
+        margin-top: 5rem;
+        max-width: 350px;
+    }
+
+    .about {
+        flex-direction: column;
+        gap: 4rem;
+    }
+    .about-img img {
+        width: 70vw;
+        margin-top: 4rem;
+        max-width: 400px;
+    }
+    .about-content h2 {
+        text-align: center;
+    }
+    .about-content h3 {
+        font-size: 2.8rem;
+    }
+
+    .services h2, .portfolio h2, .contact h2, .experience h2 {
+        margin-bottom: 4rem;
+    }
+
+    .portfolio-container, .services-container, .experience-container {
+        grid-template-columns: 1fr; /* Single column layout for most cards */
+        gap: 3rem;
+    }
+    .portfolio-box, .services-box, .experience-box {
+        flex-basis: auto; /* Reset flex basis for single column */
+        width: 90%; /* Occupy most of the width */
+        max-width: 500px; /* Limit max width for better readability */
+        margin: 0 auto; /* Center the boxes */
+    }
+    .portfolio-box {
+        height: auto; /* Allow height to adjust for content */
+        min-height: 380px; /* Ensure minimum height for project boxes */
+    }
+    .portfolio-layer {
+        padding: 3.5rem; /* Ensure consistent padding on mobile */
+    }
+    .portfolio-layer h4 {
+        font-size: 2.8rem;
+    }
+    .portfolio-layer p {
+        font-size: 1.5rem;
+    }
+
+    .contact form .input-box input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 617px) {
+    .home-content h1 {
+        font-size: 4.2rem;
+    }
+    .home-content h3 {
+        font-size: 3rem;
+    }
+    .heading {
+        font-size: 4.5rem;
+    }
+    .btn {
+        padding: 1.2rem 3rem;
+        font-size: 1.8rem;
+    }
+    .services-box, .experience-box {
+        padding: 3.5rem 2.5rem;
+    }
+    .services-box h3, .experience-box h3 {
+        font-size: 2.5rem;
+    }
+    .services-box p, .experience-box ul li {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 48%; /* Even smaller base font for very small screens */
+    }
+    .home-img img {
+        width: 75vw;
+    }
+    .about-img img{
+        width: 80vw;
+    }
+    .contact form {
+        padding: 3rem 2rem;
+    }
+    .social-media a {
+        width: 4.5rem;
+        height: 4.5rem;
+        margin: 3rem 1.5rem 3rem 0;
+    }
+    .social-media a i, .social-media .leetcode-icon {
+        font-size: 2.5rem;
+    }
+    .footer-iconTap a {
+        padding: 1rem;
+    }
+    .footer-iconTap i {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 365px) {
+    .home-img img {
+        width: 80vw;
+    }
+    .about-img img{
+        width: 85vw;
+    }
+    .footer {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .footer p{
+        margin-top: 2rem;
+    }
+}
