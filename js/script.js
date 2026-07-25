@@ -45,9 +45,9 @@ window.onscroll = () => {
 // Initializes ScrollReveal with common options for smooth entry animations
 ScrollReveal({
   // reset: true, // Set to true if you want elements to animate every time they enter the viewport
-  distance: "80px", // Distance elements move from their origin
-  duration: 2000, // Duration of the animation
-  delay: 200, // Delay before the animation starts
+  distance: "30px", // Distance elements move from their origin
+  duration: 1200, // Duration of the animation
+  delay: 150, // Delay before the animation starts
 });
 
 // Reveal elements from the top
