@@ -1,284 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>V Mathesh - Portfolio</title>
 
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins&family=Questrial&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>V Mathesh - Portfolio</title>
 
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header class="header">
-      <a href="#" class="logo">Mathesh Venkatesan</a>
-      <i class="bx bx-menu" id="menu-icon"></i>
-      <nav class="navbar">
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Skills</a>
-        <a href="#portfolio">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+  <link rel="stylesheet" href="css/styles.css?v=3.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet" />
 
-    <section class="home" id="home">
-      <div class="home-content">
-        <h3>Hi Folks, this is</h3>
-        <h1>V Mathesh</h1>
-        <h3>And I'm a <span class="multiple-text"></span></h3>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Animated Glow Blobs for Visual Depth -->
+  <div class="glow-blob blob-1"></div>
+  <div class="glow-blob blob-2"></div>
+  <div class="glow-blob blob-3"></div>
+
+  <header class="header">
+    <a href="#" class="logo">Mathesh Venkatesan</a>
+    <i class="bx bx-menu" id="menu-icon"></i>
+    <nav class="navbar">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Skills</a>
+      <a href="#portfolio">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="home" id="home">
+    <div class="home-content">
+      <h3>Hi Folks, this is</h3>
+      <h1><span class="gradient-text">V Mathesh</span></h1>
+      <h3>And I'm a <span class="multiple-text"></span></h3>
+      <p>
+        Welcome to my portfolio! I am an aspiring software engineer with a
+        passion for technology and a commitment to developing efficient,
+        scalable solutions. I aim to apply my technical expertise, analytical
+        skills, and project coordination experience to contribute meaningfully
+        to both individual and team success.
+      </p>
+      <div class="social-media">
+        <a href="https://www.linkedin.com/in/matheshv" target="_blank"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://github.com/matheshvishnu" target="_blank"><i class="bx bxl-github"></i></a>
+        <a href="https://www.instagram.com/matheshvishnu_27/" target="_blank"><i class="bx bxl-instagram"></i></a>
+      </div>
+      <a href="assets/1CR22CS225_VMathesh_RESUME.pdf" class="btn" download>Download CV</a>
+    </div>
+
+    <div class="home-img">
+      <img src="images/profile.jpeg" alt="V Mathesh Profile Picture" />
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-img">
+      <img src="images/about.jpeg" alt="About Me Image" />
+    </div>
+
+    <div class="about-content">
+      <div class="section-tag">// 01 . PROFILE</div>
+      <h2 class="heading">About <span class="gradient-text">Me</span></h2>
+      <h3>Fullstack | AI/ML Developer</h3>
+      <p>
+        I am a Computer Science and Engineering student at CMR Institute of
+        Technology, Bengaluru, pursuing a Bachelor of Engineering. My career objective is
+        to secure a challenging and responsible position in a progressive
+        organization that values innovation, continuous improvement, and
+        professional growth. I am committed to excellence and
+        driven by a passion for technology, striving to contribute meaningfully
+        to both individual and team success. My technical
+        expertise spans programming languages like Python, C, and Java,
+        frameworks such as Flask and Flutter, and various software tools and
+        cloud services including GCP, AWS, and Microsoft Azure.
+      </p>
+      <a href="#contact" class="btn">Let's Connect</a>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="section-tag">// 02 . SKILLS</div>
+    <h2 class="heading">My <span class="gradient-text">Expertise</span></h2>
+    <div class="services-container">
+      <div class="services-box">
+        <i class="bx bx-code-alt"></i>
+        <h3>Web Development</h3>
         <p>
-          Welcome to my portfolio! I am an aspiring software engineer with a
-          passion for technology and a commitment to developing efficient,
-          scalable solutions. I aim to apply my technical expertise, analytical
-          skills, and project coordination experience to contribute meaningfully
-          to both individual and team success.
+          Proficient in building modern full-stack web applications, designing RESTful APIs, and managing databases.
         </p>
-        <div class="social-media">
-          <a href="https://www.linkedin.com/in/matheshv" target="_blank"
-            ><i class="bx bxl-linkedin"></i
-          ></a>
-          <a href="https://github.com/matheshvishnu" target="_blank"
-            ><i class="bx bxl-github"></i
-          ></a>
-          <a href="https://www.instagram.com/matheshvishnu_27/" target="_blank"
-            ><i class="bx bxl-instagram"></i
-          ></a>    
-          </div>
-        <a href="assets/1CR22CS225_VMathesh_RESUME.pdf" class="btn" download
-          >Download CV</a
-        >
+        <div class="tech-pills">
+          <span class="tech-pill">React.js</span>
+          <span class="tech-pill">Python</span>
+          <span class="tech-pill">Django</span>
+          <span class="tech-pill">Flask</span>
+          <span class="tech-pill">HTML5 / CSS3</span>
+          <span class="tech-pill">JavaScript</span>
+          <span class="tech-pill">REST APIs</span>
+          <span class="tech-pill">MySQL</span>
+          <span class="tech-pill">MongoDB</span>
+        </div>
       </div>
 
-      <div class="home-img">
-        <img src="images/profile.jpeg" alt="V Mathesh Profile Picture" />
-      </div>
-    </section>
-
-    <section class="about" id="about">
-      <div class="about-img">
-        <img src="images/about.jpeg" alt="About Me Image" />
-      </div>
-
-      <div class="about-content">
-        <h2 class="heading">About <span>Me</span></h2>
-        <h3>Fullstack | AI/ML Developer</h3>
+      <div class="services-box">
+        <i class="bx bxs-brain"></i>
+        <h3>AI/ML & Data Science</h3>
         <p>
-          I am a Computer Science and Engineering student at CMR Institute of
-          Technology, Bengaluru, pursuing a Bachelor of Engineering. My career objective is
-          to secure a challenging and responsible position in a progressive
-          organization that values innovation, continuous improvement, and
-          professional growth. I am committed to excellence and
-          driven by a passion for technology, striving to contribute meaningfully
-          to both individual and team success. My technical
-          expertise spans programming languages like Python, C, and Java,
-          frameworks such as Flask and Flutter, and various software tools and
-          cloud services including GCP, AWS, and Microsoft Azure.
+          Skilled in designing AI-driven models, real-time computer vision pipelines, and deep learning analytics.
         </p>
-        <a href="#contact" class="btn">Let's Connect</a>
-      </div>
-    </section>
-
-    <section class="services" id="services">
-      <h2 class="heading">My <span>Skills</span></h2>
-      <div class="services-container">
-        <div class="services-box">
-          <i class="bx bx-code-alt"></i>
-          <h3>Web Development</h3>
-          <p>
-            Proficient in developing full-stack web applications using Python
-            (Django, Flask), HTML, CSS, JavaScript, and React.js.
-            Experienced in integrating RESTful APIs and managing databases like
-            SQL, MySQL, and MongoDB.
-          </p>
-        </div>
-
-        <div class="services-box">
-          <i class="bx bxs-brain"></i>
-          <h3>AI/ML & Data Science</h3>
-          <p>
-            Skilled in AI-driven solutions with Python, PyTorch, YOLOv12, and
-            TensorRT. Experienced in developing systems for real-time
-            analytics and processing match footage for data-driven feedback.
-          </p>
-        </div>
-
-        <div class="services-box">
-          <i class="bx bx-cog"></i>
-          <h3>Software Development & DevOps</h3>
-          <p>
-            Adept in C, Java, and Python programming. Familiar with
-            version control using Git/GitHub/GitLab and DevOps tools
-            like Azure DevOps and Docker. Experienced in debugging
-            and improving application reliability and performance.
-          </p>
+        <div class="tech-pills">
+          <span class="tech-pill">Python</span>
+          <span class="tech-pill">PyTorch</span>
+          <span class="tech-pill">YOLOv12</span>
+          <span class="tech-pill">TensorRT</span>
+          <span class="tech-pill">OpenCV</span>
+          <span class="tech-pill">NumPy</span>
+          <span class="tech-pill">Pandas</span>
+          <span class="tech-pill">Scikit-learn</span>
         </div>
       </div>
-    </section>
 
-    <section class="portfolio" id="portfolio">
-      <h2 class="heading">Latest <span>Projects</span></h2>
-
-      <div class="portfolio-container">
-        <div class="portfolio-box">
-          <img src="images/proj1.png" alt="Bandhu: Edu-Tech Project" />
-          <div class="portfolio-layer">
-            <h4>Bandhu: Edu-Tech</h4>
-            <p>
-              Bandhu is a scalable and secure digital learning platform designed to facilitate structured education through centralized content management, learner progress tracking, integrated assessments, and role-based access for administrators, educators, and students.
-            </p>
-            <a href="https://bandhu-six.vercel.app/" target="_blank"><i class="bx bx-link-external"></i></a>
-          </div>
+      <div class="services-box">
+        <i class="bx bx-cog"></i>
+        <h3>Software & DevOps</h3>
+        <p>
+          Adept in core programming languages, agile collaboration, version control, and containerization.
+        </p>
+        <div class="tech-pills">
+          <span class="tech-pill">C / C++</span>
+          <span class="tech-pill">Java</span>
+          <span class="tech-pill">Python</span>
+          <span class="tech-pill">Git / GitHub</span>
+          <span class="tech-pill">Docker</span>
+          <span class="tech-pill">Azure DevOps</span>
+          <span class="tech-pill">CI/CD</span>
+          <span class="tech-pill">Debugging</span>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="portfolio-box">
-          <img src="images/proj2.png" alt="Alpine Tulip Apartment System" />
-          <div class="portfolio-layer">
-            <h4>Alpine Tulip Apartment</h4>
-            <p>
-              User-centric web app for apartment facility management,
-              streamlining service requests, bookings, and resident info. Tech
-              Stack: HTML, CSS, JavaScript, Python (Django).
-            </p>
-            <a href="https://alpinetulipapt.vercel.app/" target="_blank"><i class="bx bx-link-external"></i></a>
-          </div>
-        </div>
+  <section class="portfolio" id="portfolio">
+    <div class="section-tag">// 03 . WORKS</div>
+    <h2 class="heading">Selected <span class="gradient-text">Projects</span></h2>
 
-        <div class="portfolio-box">
-          <img src="images/proj3.png" alt="Arogya Anugraha Project" />
-          <div class="portfolio-layer">
-            <h4>Arogya Anugraha</h4>
-            <p>
-              Arogya Anugraha is a comprehensive health management system that provides personalized health plans, tracks user health metrics, and offers AI-driven recommendations for improved well-being.
-            </p>
-            <a href="https://arogya-anugraha-app.vercel.app/" target="_blank"><i class="bx bx-link-external"></i></a>
+    <div class="portfolio-container">
+      <div class="portfolio-box">
+        <img src="images/proj1.png" alt="Bandhu: Edu-Tech Project" />
+        <div class="portfolio-layer">
+          <h4>Bandhu: Edu-Tech</h4>
+          <div class="project-tags">
+            <span class="project-tag">React.js</span>
+            <span class="project-tag">Node.js</span>
+            <span class="project-tag">MongoDB</span>
+            <span class="project-tag">Tailwind CSS</span>
           </div>
+          <p>
+            A secure, scalable digital learning platform featuring role-based administration, course content delivery,
+            and interactive assessments.
+          </p>
+          <a href="https://bandhu-six.vercel.app/" target="_blank"><i class="bx bx-link-external"></i></a>
         </div>
+      </div>
+
+      <div class="portfolio-box">
+        <img src="images/proj2.png" alt="Alpine Tulip Apartment" />
+        <div class="portfolio-layer">
+          <h4>Alpine Tulip Apartment</h4>
+          <div class="project-tags">
+            <span class="project-tag">Django</span>
+            <span class="project-tag">Python</span>
+            <span class="project-tag">HTML5 / CSS3</span>
+            <span class="project-tag">JavaScript</span>
+          </div>
+          <p>
+            A resident-focused portal for facilities bookings, maintenance tickets, and central resident directory.
+          </p>
+          <a href="https://alpinetulipapt.vercel.app/" target="_blank"><i class="bx bx-link-external"></i></a>
+        </div>
+      </div>
+
+      <div class="portfolio-box">
+        <img src="images/proj3.png" alt="Arogya Anugraha" />
+        <div class="portfolio-layer">
+          <h4>Arogya Anugraha</h4>
+          <div class="project-tags">
+            <span class="project-tag">React.js</span>
+            <span class="project-tag">Flask</span>
+            <span class="project-tag">PyTorch</span>
+            <span class="project-tag">YOLOv12</span>
+          </div>
+          <p>
+            AI-powered dashboard recommending optimized wellness plans, checking metrics, and providing smart health
+            recommendations.
+          </p>
+          <a href="https://arogya-anugraha-app.vercel.app/" target="_blank"><i class="bx bx-link-external"></i></a>
+        </div>
+      </div>
 
     </div>
-</section>
+  </section>
 
-    <section class="experience" id="experience">
-        <h2 class="heading">My <span>Experience</span></h2>
-        <div class="experience-container">
+  <section class="experience" id="experience">
+    <div class="section-tag">// 04 . JOURNEY</div>
+    <h2 class="heading">My <span class="gradient-text">Experience</span></h2>
+    <div class="experience-container">
 
-            <div class="experience-box">
-                <h3>Software Development Intern</h3>
-                <h4>Spirea Arch Pvt Ltd</h4>
-                <p class="duration">May 2025 - Present</p>
-                <ul>
-                    <li>Developed and maintained full-stack features for music and ed-tech web platforms.</li>
-                    <li>Assisted in debugging and resolving software issues to improve application reliability and performance.</li>
-                    <li>Integrated RESTful APIs with database operations to ensure dynamic content and a seamless user experience.</li>
-                    <li>Working as Team Lead for API integration at Spirea Arch Pvt Ltd.</li>
-                </ul>
-            </div>
-
-            <div class="experience-box">
-                <h3>Hackathons & Challenges</h3>
-                <ul>
-                    <li>Finalist of Code Red Hackathon conducted by BMSIT, 2025.</li>
-                    <li>Competed in prestigious Nokia Student Hackathon, 2025.</li>
-                    <li>Team Lead in Vyuhatech National level Hackathon at CMRIT, 2024.</li>
-                    <li>Certified in CraftNCode Techno Management by IIIT Bhubaneswar, 2024.</li>
-                    <li>Recognised by Rapid Innovation Challenge held by IEEE Young professionals, 2024.</li>
-                </ul>
-            </div>
-
-            <div class="experience-box">
-                <h3>Technical Clubs Leadership</h3>
-                <ul>
-                    <li>Head - RARE (Reality Augmentation and Reality Expansion), CMRIT.</li>
-                    <li>Technical Member - FOSS (Free Open Source Software) Cell, CMRIT.</li>
-                    <li>Social Media Head - ACE (Association of Computer Engineers) Club, CMRIT.</li>
-                    <li>Coordinator - Cybernauts (AI/ML) Club, CMRIT.</li>
-                </ul>
-            </div>
-
-            <div class="experience-box">
-                <h3>Online Courses & Certifications</h3>
-                <ul>
-                    <li>Google Cloud Arcade program by Google Cloud.</li>
-                    <li>JavaScript and PHP programming from Udemy.</li>
-                    <li>Cybersecurity from IBM SkillsBuild.</li>
-                    <li>Data structures and Algorithms from Infosys Springboard.</li>
-                </ul>
-            </div>
-
-            <div class="experience-box">
-                <h3>Additional Responsibilities</h3>
-                <ul>
-                    <li>Currently serving as the Student Placement Coordinator.</li>
-                    <li>Served as the Class Representative in 1st and 2nd semester.</li>
-                </ul>
-            </div>
-
-        </div>
-    </section>
-
-
-    <section class="contact" id="contact">
-      <h2 class="heading">Contact <span>Me!</span></h2>
-
-      <form
-        action="mailto:mav22cse@cmrit.ac.in"
-        method="post"
-        enctype="text/plain"
-      >
-        <div class="input-box">
-          <input type="text" placeholder="Full Name" required />
-          <input type="email" placeholder="Email Address" required />
-        </div>
-        <div class="input-box">
-          <input
-            type="tel"
-            pattern="[0-9]{10}"
-            placeholder="Mobile Number (e.g., 8762642866)"
-            required
-          />
-          <input type="text" placeholder="Email Subject" required />
-        </div>
-        <textarea
-          name="message"
-          id="message"
-          cols="30"
-          rows="10"
-          placeholder="Your Message"
-          required
-        ></textarea>
-        <input type="submit" value="Send Message" class="btn" />
-      </form>
-    </section>
-
-    <footer class="footer">
-      <div class="footer-text">
-        <p>Copyright &copy; <span id="current-year"></span> by V Mathesh | All Rights Reserved.</p>
+      <div class="experience-box">
+        <h3>Software Development Intern</h3>
+        <h4>Spirea Arch Pvt Ltd</h4>
+        <p class="duration">May 2025 - Present</p>
+        <ul>
+          <li>Developed and maintained full-stack features for music and ed-tech web platforms.</li>
+          <li>Assisted in debugging and resolving software issues to improve application reliability and performance.
+          </li>
+          <li>Integrated RESTful APIs with database operations to ensure dynamic content and a seamless user experience.
+          </li>
+          <li>Working as Team Lead for API integration at Spirea Arch Pvt Ltd.</li>
+        </ul>
       </div>
 
-      <div class="footer-iconTap">
-        <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+      <div class="experience-box">
+        <h3>Hackathons & Challenges</h3>
+        <ul>
+          <li>Finalist of Code Red Hackathon conducted by BMSIT, 2025.</li>
+          <li>Competed in prestigious Nokia Student Hackathon, 2025.</li>
+          <li>Team Lead in Vyuhatech National level Hackathon at CMRIT, 2024.</li>
+          <li>Certified in CraftNCode Techno Management by IIIT Bhubaneswar, 2024.</li>
+          <li>Recognised by Rapid Innovation Challenge held by IEEE Young professionals, 2024.</li>
+        </ul>
       </div>
-    </footer>
 
-    <script src="https://unpkg.com/scrollreveal"></script>
+      <div class="experience-box">
+        <h3>Technical Clubs Leadership</h3>
+        <ul>
+          <li>Head - RARE (Reality Augmentation and Reality Expansion), CMRIT.</li>
+          <li>Technical Member - FOSS (Free Open Source Software) Cell, CMRIT.</li>
+          <li>Social Media Head - ACE (Association of Computer Engineers) Club, CMRIT.</li>
+          <li>Coordinator - Cybernauts (AI/ML) Club, CMRIT.</li>
+        </ul>
+      </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+      <div class="experience-box">
+        <h3>Online Courses & Certifications</h3>
+        <ul>
+          <li>Google Cloud Arcade program by Google Cloud.</li>
+          <li>JavaScript and PHP programming from Udemy.</li>
+          <li>Cybersecurity from IBM SkillsBuild.</li>
+          <li>Data structures and Algorithms from Infosys Springboard.</li>
+        </ul>
+      </div>
 
-    <script src="js/script.js"></script>
-    <script>
-      // Automatically update current year in footer
-      document.getElementById('current-year').textContent = new Date().getFullYear();
-    </script>
-  </body>
+      <div class="experience-box">
+        <h3>Additional Responsibilities</h3>
+        <ul>
+          <li>Currently serving as the Student Placement Coordinator.</li>
+          <li>Served as the Class Representative in 1st and 2nd semester.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="contact" id="contact">
+    <div class="section-tag">// 05 . CONTACT</div>
+    <h2 class="heading">Let's <span class="gradient-text">Connect</span></h2>
+
+    <form action="mailto:mav22cse@cmrit.ac.in" method="post" enctype="text/plain">
+      <div class="input-box">
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email Address" required />
+      </div>
+      <div class="input-box">
+        <input type="tel" pattern="[0-9]{10}" placeholder="Mobile Number (e.g., 8762642866)" required />
+        <input type="text" placeholder="Email Subject" required />
+      </div>
+      <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+      <input type="submit" value="Send Message" class="btn" />
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-text">
+      <p>Copyright &copy; <span id="current-year"></span> by V Mathesh | All Rights Reserved.</p>
+    </div>
+
+    <div class="footer-iconTap">
+      <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <script src="js/script.js"></script>
+  <script>
+    // Automatically update current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+
 </html>
